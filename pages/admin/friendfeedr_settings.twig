@@ -1,0 +1,28 @@
+{% extends "layout.twig" %}
+
+{% block title %}${ "FriendFeed Settings" | translate("friendfeedr") }{% endblock %}
+
+{% block content %}
+            <h1>${ "FriendFeed Settings" | translate("friendfeedr") }</h1>
+            <form id="friendfeedr_settings" class="split" action="{% admin "friendfeedr_settings" %}" method="post">
+                <fieldset>
+                    <p>
+                        <label for="friendfeedr_username">${ "Username" | translate("friendfeedr") }</label>
+                        <input class="text" type="text" name="friendfeedr_username" value="${ site.friendfeedr_username | escape }" id="friendfeedr_username" />
+						<span class="sub"><?php echo __('Your FriendFeed username.', 'friendfeedr'); ?></span>
+                    </p>
+                    <p>
+                        <label for="friendfeedr_wrapper">${ "Wrapper" | translate("friendfeedr") }</label>
+                        <textarea class="text" type="text" name="friendfeedr_wrapper" id="friendfeedr_wrapper" rows="5" cols="50">${ site.friendfeedr_wrapper | escape }</textarea>
+						<span class="sub"><?php echo __('Your FriendFeed Wrapper.', 'friendfeedr'); ?></span>
+                    </p>
+                    <p class="buttons">
+                        <p>
+                            <button type="submit" class="yay"><img src="$theme_url/images/icons/success.png" alt="success" />${ "Update" | translate }</button>
+                        </p>
+                    </p>
+
+                    <input type="hidden" name="hash" value="$site.secure_hashkey" id="hash" />
+                </fieldset>
+            </form>
+{% endblock %}

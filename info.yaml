@@ -1,0 +1,13 @@
+name: FriendFeedr
+url: http://www.thisisrobv.com
+version: 2.0
+description: Injects the code needed for <a href="http://www.friendfeed.com/">FriendFeed</a> on the sidebar of a page.
+license:MIT
+author:
+  name: Rob V
+  url: http://www.thisisrobv.com
+
+notifications:
+  - Please remember to set your FriendFeed username.
+
+confirm: Do you want to remove your FriendFeed username from Chyrp?
